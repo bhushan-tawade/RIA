@@ -1,39 +1,83 @@
-# RIA AI
+# RIA – Real-time Interactive Assistant
 
-A modern AI-powered web application built with the MERN (MongoDB, Express.js, React.js, Node.js) stack.
+**RIA** is a real-time chatbot powered by the **Gemini API**, designed to facilitate intelligent, natural conversations with users. Built with **React.js** and **Node.js**, and styled using **Tailwind CSS**, this project demonstrates a seamless full-stack integration of AI with modern web technologies.
 
-## Features
+---
 
-- User Authentication (Login/Signup)
-- AI Chat Interface
-- Chat History Management
-- Responsive Design
-- Secure Password Management
-- Session Handling
+## 🚀 Getting Started
 
-## Tech Stack
+### 1. Clone the Repository
 
-### Frontend
-- React.js
-- Tailwind CSS
-- Axios for API calls
-- React Router for navigation
-- Context API for state management
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- JWT for authentication
-
-## Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB
-- npm or yarn
-
-## Installation
-
-1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/ria_ai.git
+git clone https://github.com/bhushan-tawade/RIA.git
+cd RIA
+```
+
+### 2. Install Frontend Dependencies
+
+```bash
+cd frontend
+npm install
+```
+
+### 3. Install Backend Dependencies
+
+```bash
+cd ../backend
+npm install
+```
+
+### 4. Create Environment Variables
+
+Inside the `backend` directory, create a `.env` file with the following:
+
+```env
+PORT=5000
+GEMINI_API_KEY=your_gemini_api_key
+MONGODB_URI=your_mongodb_connection_string
+```
+
+---
+
+## 🧠 Running the Application
+
+### 1. Start the Backend Server
+
+```bash
+cd backend
+npm run dev
+```
+
+### 2. Start the Frontend Development Server
+
+```bash
+cd frontend
+npm run dev
+```
+
+The application will be available at: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📡 API Endpoints
+
+### 🔐 Authentication
+
+- `POST /login` - User login  
+- `POST /signup` - User registration
+
+### 💬 Chat
+
+- `GET /history/:userId` - Get user's chat history  
+- `POST /chat` - Send a message to AI  
+- `DELETE /history/:userId` - Clear chat history
+
+---
+
+
+## 🙏 Acknowledgments
+
+- Built with **React.js** and **Node.js**
+- Styled using **Tailwind CSS**
+- AI capabilities powered by **Gemini API**
+
